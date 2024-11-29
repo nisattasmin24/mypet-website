@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Petty Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@^2.0.0/dist/full.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-100">
+  <!-- Navbar -->
+  <nav class="navbar bg-base-100 shadow-lg fixed top-0 w-full z-10">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">Peddy</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#banner">Home</a></li>
+        <li><a href="#adopt-section">Adopt Pets</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section id="banner" class="hero min-h-screen bg-gray-800 text-white">
+    <div class="hero-content text-center">
+      <div class="max-w-lg">
+        <h1 class="text-5xl font-bold">Find Your Best Friend</h1>
+        <p class="py-6">Adopt a pet and give them a loving home today.</p>
+        <button class="btn btn-primary" onclick="scrollToAdoptSection()">View More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Adopt Section -->
+  <section id="adopt-section" class="py-10 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold">Adopt Your Best Friend</h2>
+        <p class="text-gray-600">Choose a pet and make them part of your family.</p>
+        <button id="sort-price-btn" class="btn btn-secondary my-4">Sort by Price</button>
+      </div>
+
+      <!-- Categories -->
+      <div id="categories" class="flex justify-center gap-4 mt-6"></div>
+
+      <!-- Pets Grid -->
+      <div id="pets-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"></div>
+
+      <!-- Liked Pets -->
+      <div id="liked-pets" class="mt-12">
+        <h3 class="text-2xl font-bold">Liked Pets</h3>
+        <div class="grid grid-cols-2 gap-4 mt-4 liked-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer p-4 bg-gray-800 text-white text-center">
+    <p>&copy; 2024 Peddy. All rights reserved.</p>
+  </footer>
+
+
+    <script src="/js/script.js"></script>
+    
+</body>
+</html>
